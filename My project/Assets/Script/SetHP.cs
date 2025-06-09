@@ -63,8 +63,8 @@ public class SetHP : MonoBehaviour
 
         Img_HPbar.fillAmount = nowHP / maxHP;
         Txt_HP.text = $"{nowHP} / {maxHP}"; // now HP / maxHP : 50 / 100
-        Txt_HealPoint_1.text = $"{HealPoint}의 피해를 입혔다!";
-        Txt_HealPoint_2.text = $"{HealPoint}의 피해를 입혔다!";
+        Txt_HealPoint_1.text = $"{HealPoint}만큼 회복했다!";
+        Txt_HealPoint_2.text = $"{HealPoint}만큼 회복했다!";
         
     }
 
