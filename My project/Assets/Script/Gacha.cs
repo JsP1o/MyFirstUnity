@@ -58,7 +58,7 @@ public class Gacha : MonoBehaviour
 
     public void GachaButton()
     {
-        Debug.Log($"--- {currentGacha} Type 가차 10회 시작 ---");
+        Debug.Log($"--- {currentGacha} Type 뽑기 10회 시작 ---");
         if (gachaLogText != null)
         {
             gachaLogText.text = "";
@@ -313,9 +313,9 @@ public class Gacha : MonoBehaviour
 
         else
         {
-            Debug.Log("가차 이미지 슬롯이 비어있거나 인덱스가 범위를 벗어났습니다.");
+            Debug.Log("이미지 없음");
         }
-        Debug.Log($"--- {currentGacha} Type 가차 종료 ---");
+        Debug.Log($"--- {currentGacha} Type 뽑기 종료 ---");
         gachaNumber++;
         }
     }
