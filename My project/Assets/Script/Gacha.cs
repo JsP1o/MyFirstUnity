@@ -22,6 +22,7 @@ public class Gacha : MonoBehaviour
     [SerializeField] Sprite image1_3;
     [SerializeField] Sprite image1_4;
     [SerializeField] Sprite image1_5;
+    [SerializeField] Sprite image1_6;
 
     [Header("Gacha Images2")]
     [SerializeField] Sprite image2_1;
@@ -29,6 +30,7 @@ public class Gacha : MonoBehaviour
     [SerializeField] Sprite image2_3;
     [SerializeField] Sprite image2_4;
     [SerializeField] Sprite image2_5;
+    [SerializeField] Sprite image2_6;
 
     [Header("Gacha Images3")]
     [SerializeField] Sprite image3_1;
@@ -36,13 +38,14 @@ public class Gacha : MonoBehaviour
     [SerializeField] Sprite image3_3;
     [SerializeField] Sprite image3_4;
     [SerializeField] Sprite image3_5;
+    [SerializeField] Sprite image3_6;
 
     private void Awake()
     {
 
         if (gachaLogText != null)
         {
-            gachaLogText.text = "°¡Â÷ ±â·ÏÀÌ ¿©±â¿¡ Ç¥½ÃµË´Ï´Ù.\n";
+            gachaLogText.text = "»Ì±â ±â·ÏÀÌ ¿©±â¿¡ Ç¥½ÃµË´Ï´Ù.\n";
         }
         count = 0; // ÃÊ±âÈ­   
     }
@@ -67,7 +70,7 @@ public class Gacha : MonoBehaviour
             int randomValue = Random.Range(1, 101);
             count++;
 
-            string chracterName = "";
+            //string characterName = "";
             Sprite characterSprite = null;
 
             switch (currentGacha)
@@ -76,140 +79,230 @@ public class Gacha : MonoBehaviour
 
                     if (10 <= count)
                     {
-                        chracterName = "1%";
-                        characterSprite = image1_1;
+                        //characterName = "special";
+                        characterSprite = image1_6;
                         Debug.Log("10È¸ º¸»ó¿¡ ´çÃ·µÆ´Ù!");
                         count = 0;
+
+                        if (gachaLogText != null)
+                        {
+                            gachaLogText.text += "<color=#EA0000>¡Ú 10È¸ »Ì±â º¸³Ê½º ´çÃ·! ¡Ú</color>\n";
+                        }
                     }
 
                     else if (randomValue <= 1)
                     {
-                        chracterName = "1%";
+                        //characterName = "1%";
                         characterSprite = image1_1;
                         Debug.Log("1%¿¡ ´çÃ·µÆ´Ù!");
+
+                        if (gachaLogText != null)
+                        {
+                            gachaLogText.text += "<color=#FFC000> 1%¿¡ ´çÃ· µÆ´Ù! </color>\n";
+                        }
                     }
 
                     else if (randomValue <= 5)
                     {
-                        chracterName = "4%";
+                        //characterName = "4%";
                         characterSprite = image1_2;
                         Debug.Log("4%¿¡ ´çÃ·µÆ´Ù!");
+
+                        if (gachaLogText != null)
+                        {
+                            gachaLogText.text += "<color=#5601FF> 4%¿¡ ´çÃ· µÆ´Ù! </color>\n";
+                        }
                     }
 
                     else if (randomValue <= 15)
                     {
-                        chracterName = "10%";
+                        //characterName = "10%";
                         characterSprite = image1_3;
                         Debug.Log("10%¿¡ ´çÃ·µÆ´Ù!");
+
+                        if (gachaLogText != null)
+                        {
+                            gachaLogText.text += "<color=#FA0686> 10%¿¡ ´çÃ· µÆ´Ù! </color>\n";
+                        }
                     }
 
                     else if (randomValue <= 30)
                     {
-                        chracterName = "15%";
+                        //characterName = "15%";
                         characterSprite = image1_4;
                         Debug.Log("15%¿¡ ´çÃ·µÆ´Ù!");
+
+                        if (gachaLogText != null)
+                        {
+                            gachaLogText.text += "<color=#4ABC44> 15%¿¡ ´çÃ· µÆ´Ù! </color>\n";
+                        }
                     }
 
                     else
                     {
-                        chracterName = "²Î";
+                        //characterName = "²Î";
                         characterSprite = image1_5;
                         Debug.Log("²Î!");
+
+                        if (gachaLogText != null)
+                        {
+                            gachaLogText.text += "<color=#808080> ²Î! </color>\n";
+                        }
                     }
                     break;
 
                 case 2:
                     {
-                        if (10 <= count)
-                        {
-                            chracterName = "1%";
-                            characterSprite = image2_1;
-                            Debug.Log("10È¸ º¸»ó¿¡ ´çÃ·µÆ´Ù!");
-                            count = 0;
-                        }
+                    if (10 <= count)
+                    {
+                        //characterName = "special";
+                        characterSprite = image2_6;
+                        Debug.Log("10È¸ º¸»ó¿¡ ´çÃ·µÆ´Ù!");
+                        count = 0;
 
-                        else if (randomValue <= 1)
+                        if (gachaLogText != null)
                         {
-                            chracterName = "1%";
-                            characterSprite = image2_1;
-                            Debug.Log("1%¿¡ ´çÃ·µÆ´Ù!");
+                            gachaLogText.text += "<color=#EA0000>¡Ú 10È¸ »Ì±â º¸³Ê½º ´çÃ·! ¡Ú</color>\n";
                         }
-
-                        else if (randomValue <= 5)
-                        {
-                            chracterName = "4%";
-                            characterSprite = image2_2;
-                            Debug.Log("4%¿¡ ´çÃ·µÆ´Ù!");
-                        }
-
-                        else if (randomValue <= 15)
-                        {
-                            chracterName = "10%";
-                            characterSprite = image2_3;
-                            Debug.Log("10%¿¡ ´çÃ·µÆ´Ù!");
-                        }
-
-                        else if (randomValue <= 30)
-                        {
-                            chracterName = "15%";
-                            characterSprite = image2_4;
-                            Debug.Log("15%¿¡ ´çÃ·µÆ´Ù!");
-                        }
-
-                        else
-                        {
-                            chracterName = "²Î";
-                            characterSprite = image2_5;
-                            Debug.Log("²Î!");
-                        }
-                        break;
                     }
+
+                    else if (randomValue <= 1)
+                    {
+                        //characterName = "1%";
+                        characterSprite = image2_1;
+                        Debug.Log("1%¿¡ ´çÃ·µÆ´Ù!");
+
+                        if (gachaLogText != null)
+                        {
+                            gachaLogText.text += "<color=#FFC000> 1%¿¡ ´çÃ· µÆ´Ù! </color>\n";
+                        }
+                    }
+
+                    else if (randomValue <= 5)
+                    {
+                        //characterName = "4%";
+                        characterSprite = image2_2;
+                        Debug.Log("4%¿¡ ´çÃ·µÆ´Ù!");
+
+                        if (gachaLogText != null)
+                        {
+                            gachaLogText.text += "<color=#5601FF> 4%¿¡ ´çÃ· µÆ´Ù! </color>\n";
+                        }
+                    }
+
+                    else if (randomValue <= 15)
+                    {
+                        //characterName = "10%";
+                        characterSprite = image2_3;
+                        Debug.Log("10%¿¡ ´çÃ·µÆ´Ù!");
+
+                        if (gachaLogText != null)
+                        {
+                            gachaLogText.text += "<color=#FA0686> 10%¿¡ ´çÃ· µÆ´Ù! </color>\n";
+                        }
+                    }
+
+                    else if (randomValue <= 30)
+                    {
+                        //characterName = "15%";
+                        characterSprite = image2_4;
+                        Debug.Log("15%¿¡ ´çÃ·µÆ´Ù!");
+
+                        if (gachaLogText != null)
+                        {
+                            gachaLogText.text += "<color=#4ABC44> 15%¿¡ ´çÃ· µÆ´Ù! </color>\n";
+                        }
+                    }
+
+                    else
+                    {
+                        //characterName = "²Î";
+                        characterSprite = image2_5;
+                        Debug.Log("²Î!");
+
+                        if (gachaLogText != null)
+                        {
+                            gachaLogText.text += "<color=#808080> ²Î! </color>\n";
+                        }
+                    }
+                    break;
+                }
 
                 case 3:
                     {
-                        if (10 <= count)
-                        {
-                            chracterName = "1%";
-                            characterSprite = image3_1;
-                            Debug.Log("10È¸ º¸»ó¿¡ ´çÃ·µÆ´Ù!");
-                            count = 0;
-                        }
+                    if (10 <= count)
+                    {
+                        //characterName = "special";
+                        characterSprite = image3_6;
+                        Debug.Log("10È¸ º¸»ó¿¡ ´çÃ·µÆ´Ù!");
+                        count = 0;
 
-                        else if (randomValue <= 1)
+                        if (gachaLogText != null)
                         {
-                            chracterName = "1%";
-                            characterSprite = image3_1;
-                            Debug.Log("1%¿¡ ´çÃ·µÆ´Ù!");
+                            gachaLogText.text += "<color=#EA0000>¡Ú 10È¸ »Ì±â º¸³Ê½º ´çÃ·! ¡Ú</color>\n";
                         }
+                    }
 
-                        else if (randomValue <= 5)
-                        {
-                            chracterName = "4%";
-                            characterSprite = image3_2;
-                            Debug.Log("4%¿¡ ´çÃ·µÆ´Ù!");
-                        }
+                    else if (randomValue <= 1)
+                    {
+                        //characterName = "1%";
+                        characterSprite = image3_1;
+                        Debug.Log("1%¿¡ ´çÃ·µÆ´Ù!");
 
-                        else if (randomValue <= 15)
+                        if (gachaLogText != null)
                         {
-                            chracterName = "10%";
-                            characterSprite = image3_3;
-                            Debug.Log("10%¿¡ ´çÃ·µÆ´Ù!");
+                            gachaLogText.text += "<color=#FFC000> 1%¿¡ ´çÃ· µÆ´Ù! </color>\n";
                         }
+                    }
 
-                        else if (randomValue <= 30)
-                        {
-                            chracterName = "15%";
-                            characterSprite = image3_4;
-                            Debug.Log("15%¿¡ ´çÃ·µÆ´Ù!");
-                        }
+                    else if (randomValue <= 5)
+                    {
+                        //characterName = "4%";
+                        characterSprite = image3_2;
+                        Debug.Log("4%¿¡ ´çÃ·µÆ´Ù!");
 
-                        else
+                        if (gachaLogText != null)
                         {
-                            chracterName = "²Î";
-                            characterSprite = image3_5;
-                            Debug.Log("²Î!");
+                            gachaLogText.text += "<color=#5601FF> 4%¿¡ ´çÃ· µÆ´Ù! </color>\n";
                         }
-                        break;
+                    }
+
+                    else if (randomValue <= 15)
+                    {
+                        //characterName = "10%";
+                        characterSprite = image3_3;
+                        Debug.Log("10%¿¡ ´çÃ·µÆ´Ù!");
+
+                        if (gachaLogText != null)
+                        {
+                            gachaLogText.text += "<color=#FA0686> 10%¿¡ ´çÃ· µÆ´Ù! </color>\n";
+                        }
+                    }
+
+                    else if (randomValue <= 30)
+                    {
+                        //characterName = "15%";
+                        characterSprite = image3_4;
+                        Debug.Log("15%¿¡ ´çÃ·µÆ´Ù!");
+
+                        if (gachaLogText != null)
+                        {
+                            gachaLogText.text += "<color=#4ABC44> 15%¿¡ ´çÃ· µÆ´Ù! </color>\n";
+                        }
+                    }
+
+                    else
+                    {
+                        //characterName = "²Î";
+                        characterSprite = image3_5;
+                        Debug.Log("²Î!");
+
+                        if (gachaLogText != null)
+                        {
+                            gachaLogText.text += "<color=#808080> ²Î! </color>\n";
+                        }
+                    }
+                    break;
                     }
             }
 
@@ -224,16 +317,6 @@ public class Gacha : MonoBehaviour
         }
         Debug.Log($"--- {currentGacha} Type °¡Â÷ Á¾·á ---");
         gachaNumber++;
-
-        if (gachaLogText != null)
-        {
-            gachaLogText.text += $"{chracterName}À»(¸¦) »Ì¾Ò½À´Ï´Ù.\n";
-        }
-        else
-        {
-            Debug.Log("°¡Â÷ ±â·Ï ÅØ½ºÆ®°¡ ÇÒ´çµÇÁö ¾Ê¾Ò½À´Ï´Ù.");
-        }
-
         }
     }
 }

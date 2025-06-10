@@ -2269,16 +2269,19 @@ MonoBehaviour:
   image1_3: {fileID: 21300000, guid: 6572987e4c33de341b752228d5f0ac53, type: 3}
   image1_4: {fileID: 21300000, guid: 134d9e280b6818b478ecc22e65b0683d, type: 3}
   image1_5: {fileID: 21300000, guid: 86419bb9109b41a4c9b465f3419342b1, type: 3}
+  image1_6: {fileID: 21300000, guid: 888c6f04c706b6143a159ade02cbf841, type: 3}
   image2_1: {fileID: 21300000, guid: 445574fa01b76b845a486a811b3ea727, type: 3}
   image2_2: {fileID: 21300000, guid: a30ae603523ceab44b443c2b20e0f163, type: 3}
   image2_3: {fileID: 21300000, guid: c92aaae493ce3b4459648750e682eb7f, type: 3}
   image2_4: {fileID: 21300000, guid: 0a088f8b5a52933418dd0b2be7aa24fb, type: 3}
   image2_5: {fileID: 21300000, guid: f09cb1cc652ed0d4e9ff887f94d219fb, type: 3}
+  image2_6: {fileID: 21300000, guid: f71ba6f0203bcc144a2cbef6afd168d6, type: 3}
   image3_1: {fileID: 21300000, guid: 7ed2541f93a55b344a8b74028b381aa5, type: 3}
   image3_2: {fileID: 21300000, guid: 909c329b0e20033438c5ea538ba45b9d, type: 3}
   image3_3: {fileID: 21300000, guid: 8131f6af535e94b4d893e269d6f78f13, type: 3}
   image3_4: {fileID: 21300000, guid: 3282126d28dc92040b7f1047404344b4, type: 3}
   image3_5: {fileID: 21300000, guid: 31e7bf364b9d6e644b36ba9b6492aa87, type: 3}
+  image3_6: {fileID: 21300000, guid: e057e9ed7dd9e8644b90e115e9dd62a6, type: 3}
 --- !u!1 &1442782468
 GameObject:
   m_ObjectHideFlags: 0
